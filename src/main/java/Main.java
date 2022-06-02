@@ -4,21 +4,20 @@ public class Main {
         switch (dayOfWeek) {
 
             case 1:
-                return "Poniedziałek";
+                return "Monday";
             case 2:
-                return "Wtorek";
+                return "Tuesday";
             case 3:
-                return "środa";
+                return "Wednesday";
             case 4:
-                return "Czwartek";
+                return "Thursday";
             case 5:
-               return "Piątek";
+               return "Friday";
             case 6:
             case 7:
                return "Weekend";
             default:
                 return "There is no such a day!";
-
         }
 
     }
