@@ -1,8 +1,7 @@
 public class Main {
 
-    public static String printDayOfWeek(int dayOfWeek) {
+    public static String getDayOfWeek(int dayOfWeek) {
         switch (dayOfWeek) {
-
             case 1:
                 return "Monday";
             case 2:
@@ -12,16 +11,15 @@ public class Main {
             case 4:
                 return "Thursday";
             case 5:
-               return "Friday";
+                return "Friday";
             case 6:
             case 7:
-               return "Weekend";
+                return "Weekend";
             default:
                 return "There is no such a day!";
         }
-
     }
 
-    }
+}
 
 

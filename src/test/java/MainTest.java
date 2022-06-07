@@ -10,7 +10,7 @@ class MainTest {
         //given
         int monday = 1;
         //when
-        String mondayExpected = Main.printDayOfWeek(monday);
+        String mondayExpected = Main.getDayOfWeek(monday);
         //then
         Assertions.assertEquals(mondayExpected, "Monday");
     }
@@ -20,7 +20,7 @@ class MainTest {
         //given
         int tuesday = 2;
         //when
-        String tuesdayExpected = Main.printDayOfWeek(tuesday);
+        String tuesdayExpected = Main.getDayOfWeek(tuesday);
         //then
         Assertions.assertEquals(tuesdayExpected, "Tuesday");
     }
@@ -30,7 +30,7 @@ class MainTest {
         //given
         int wednesday = 3;
         //when
-        String wednesdayExpected = Main.printDayOfWeek(wednesday);
+        String wednesdayExpected = Main.getDayOfWeek(wednesday);
         //then
         Assertions.assertEquals(wednesdayExpected, "Wednesday");
     }
@@ -40,7 +40,7 @@ class MainTest {
         //given
         int thursday = 4;
         //when
-        String thursdayExpected = Main.printDayOfWeek(thursday);
+        String thursdayExpected = Main.getDayOfWeek(thursday);
         //then
         Assertions.assertEquals(thursdayExpected, "Thursday");
     }
@@ -50,21 +50,28 @@ class MainTest {
         //given
         int friday = 5;
         //when
-        String fridayExpected = Main.printDayOfWeek(friday);
+        String fridayExpected = Main.getDayOfWeek(friday);
         //then
         Assertions.assertEquals(fridayExpected, "Friday");
     }
 
     @Test
-    void shouldReturnWeekend() {
+    void shouldReturnSaturday() {
         //given
         int saturday = 6;
-        int sunday = 7;
         //when
-        String weekendExpectedOnSaturday = Main.printDayOfWeek(saturday);
-        String weekendExpectedOnSunday = Main.printDayOfWeek(sunday);
+        String weekendExpectedOnSaturday = Main.getDayOfWeek(saturday);
         //then
         Assertions.assertEquals(weekendExpectedOnSaturday, "Saturday");
+    }
+
+    @Test
+    void shouldReturnSunday() {
+        //given
+        int sunday = 7;
+        //when
+        String weekendExpectedOnSunday = Main.getDayOfWeek(sunday);
+        //then
         Assertions.assertEquals(weekendExpectedOnSunday, "Sunday");
     }
 
@@ -73,7 +80,7 @@ class MainTest {
         //given
         int wrongDay = 25;
         //when
-        String wrongDayExpected = Main.printDayOfWeek(wrongDay);
+        String wrongDayExpected = Main.getDayOfWeek(wrongDay);
         //then
         Assertions.assertEquals(wrongDayExpected, "There is no such a Day");
     }
